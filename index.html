@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title> Time and Task Managment  </title>
+</head>
+<body>
+<header>
+    <h1 style="text-align: center;">Time and Task Managment</h1>
+</header>  
+<main>  
+<div id="div1"> 
+    <div id="div2" >
+    <h3 id="hh3"> Tick the time to Work  </h3> 
+    <label for="Morning" class="labelS">Morning🌅 
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Morning" class="sameInput" > </label> <br>
+     
+     <label for="afternoon" class="labelS">Afternoon🌞 
+     <input type="checkbox" value="Afternoon"  class="sameInput"></label><br>
+     
+     <label for="evening" class="labelS">Evening⛅ 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Evening" class="sameInput"></label>  <br>
+    
+     <label for="night" class="labelS">Night🌃 
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="Night" class="sameInput"></label>  <br><br>
+      <h1 class="H1" id="h1"></h1>
+     <button type="button" id="button1" onclick="getValue(); return false" > Go-- </button>
+
+    </div>
+</div>
+</main> 
+
+<script>
+    function getValue(e){
+    var getChecks = document.getElementsByClassName("sameInput");
+    var geth1 = document.getElementById("h1");
+    var empty1 = '';
+
+    
+
+    for(i=0; i<4; i++){
+    if(getChecks[i].checked===true){
+    var storeValue1 =  empty1 += getChecks[i].value;
+    sessionStorage.setItem("empty1",storeValue1)
+   slocation.href="Main.html";
+   console.log(storeValue1);
+
+}  
+} 
+  
+     
+     //console.log(storeValue1);
+     // geth1.innerHTML=empty1;
+     
+    
+    
+  }
+
+
+</script>
+
+</body>
+</html>
