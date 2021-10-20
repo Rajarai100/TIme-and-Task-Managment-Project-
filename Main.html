@@ -14,13 +14,9 @@
 
 var getItem = sessionStorage.getItem("empty1");
 //var itemStore = 0;
-
-    for(j=0; j<getItem; j++){
-    var storeValueA = new Array();
-    storeValueA[j]=getItem;
-
-    console.log(storeValueA);
-    console.log(getItem);
+getItem = getItem.split(" ");
+for(j = 0; j < getItem.length; j++){
+    console.log(getItem[j]);
 }
 
 
