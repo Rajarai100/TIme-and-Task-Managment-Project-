@@ -43,10 +43,11 @@
 
     for(i=0; i<4; i++){
     if(getChecks[i].checked===true){
-    var storeValue1 =  empty1 += getChecks[i].value;
+    var storeValue1 =  empty1 += getChecks[i].value + " ";
     sessionStorage.setItem("empty1",storeValue1)
-   slocation.href="Main.html";
-   console.log(storeValue1);
+    location.href="Main.html";
+     
+    console.log(storeValue1);
 
 }  
 } 
